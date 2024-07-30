@@ -12,7 +12,6 @@ import Grants from './components/Grants';
 import Contributors from '@/app/components/Contributors';
 
 
-
 export default function Page() {
   const members = [
     { name: 'Brian Flynn', twitter: 'Flynnjamm', profileUrl: 'https://pbs.twimg.com/profile_images/1599076785194516491/jzjsD8nJ_400x400.jpg' },

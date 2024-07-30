@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: 'Boot Guild!',
   description: 'LFG',
   openGraph: {
-    title: 'RH',
-    description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    title: 'Boost Guild',
+    description: 'Boost Guild Website',
+    images: [`${NEXT_PUBLIC_URL}/images/how-boostguild-work.webp`],
   },
   other: {
     // ...frameMetadata,

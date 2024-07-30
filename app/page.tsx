@@ -28,21 +28,13 @@ export default function Page() {
   ];
   return (
     <>
-      <FrameMetadata
-        buttons={[
-          { label: 'Read Summary', action: 'post' },
-          { label: 'Go To Approved', action: 'post_redirect' },
-        ]}
-        image={`${NEXT_PUBLIC_URL}/boost-pass-display.png`}
-        post_url={`${NEXT_PUBLIC_URL}/api/frame`}
-      />
       <div className={styles.container}>
         <Header />
         <main className={styles.mainContent}>
-          <About />
           <Marketing />
+          <About />
           <Contributors members={members} />
-          <Actions />
+          {/* <Actions /> */}
           <Grants />
         </main>
       </div>

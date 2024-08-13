@@ -19,9 +19,9 @@ const Header: React.FC = () => {
             <Link href="/" className="flex items-center">
               <span className="text-2xl font-bold text-blue-600">+ BoostGuild</span>
             </Link>
-            <span className="ml-4 px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+            {/* <span className="ml-4 px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
               Balance: $297.6K
-            </span>
+            </span> */}
           </div>
           
           {/* Desktop navigation */}

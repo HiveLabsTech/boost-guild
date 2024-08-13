@@ -74,7 +74,7 @@ const Marketing: React.FC = () => {
                   <h3 className="text-2xl font-semibold">{currentActivity.title}</h3>
                   <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Active</span>
                 </div>
-                <p className="text-lg font-medium text-gray-700 mb-4">Daily Prize: {currentActivity.prize}</p>
+                <p className="text-lg font-medium text-gray-700 mb-4">Prize: {currentActivity.prize}</p>
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-2">How to participate:</h4>
                   <ol className="list-decimal list-inside space-y-2">

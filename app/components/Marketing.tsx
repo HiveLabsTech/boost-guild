@@ -16,29 +16,28 @@ interface Activity {
 const activities: Activity[] = [
   {
     title: "Boost Daily Bonanza",
-    prize: "100 USDC",
+    prize: "10 $ARB Per Wallet",
     steps: [
-      "Login to boost.xyz daily",
-      "Complete at least one boost task",
-      "Automatically enter the next day's draw",
-      "Check results at UTC 00:00 in Discord"
+      "Complete Boost in <a href='https://boost.xyz' target='_blank' rel='noopener noreferrer'>boost.xyz</a> daily",
+      "Check the Lottery winners at UTC 02:00:00 in Discord channel <a href='https://discord.com/channels/1115806843650965546/1272752734721937480' target='_blank' rel='noopener noreferrer' className='text-blue-500 hover:text-blue-700'>#Boost Daily Bonanza</a>",
+      "Or on <a href='https://boost.xyz' target='_blank' rel='noopener noreferrer'>Boost</a> website"
     ],
-    announcement: "Results announced daily in the \"Boost Daily Bonanza\" Discord channel",
+    announcement: "Results announced daily in Discord channel <a href='https://discord.com/channels/1115806843650965546/1272752734721937480' target='_blank' rel='noopener noreferrer'>#Boost Daily Bonanza</a>",
     link: "https://boost.xyz/",
-    image: "/park-1.png"
+    image: "/BoostDailyBonanza.png"
   },
   {
-    title: "Weekly Challenge",
-    prize: "500 USDC",
-    steps: [
-      "Complete 5 boost tasks in a week",
-      "Share your progress on Twitter",
-      "Tag three friends to join",
-      "Winners announced every Monday"
+    "title": "Boost Feedback Reward",
+    "prize": "50 $ARB ~ 500 $ARB",
+    "steps": [
+      "Go to Discord channel 🔁-give-feedback",
+      "Provide suggestions and feedback about Boost",
+      "Get recommended by Boost Guild members weekly",
+      "Receive rewards"
     ],
-    announcement: "Top performers featured on our website",
-    link: "https://boost.xyz/weekly-challenge",
-    image: "/park-2.png"
+    "link": "https://discord.com/channels/1115806843650965546/1209938994666930227",
+    "announcement": "Winners announced weekly in Discord",
+    "image": "/BoostFeedbackReward.png"
   },
   // Add more activities as needed
 ];
@@ -49,7 +48,7 @@ const Marketing: React.FC = () => {
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % activities.length);
-      }, 5000);
+      }, 30000);
   
       return () => clearInterval(timer);
     }, []);
@@ -79,12 +78,11 @@ const Marketing: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-2">How to participate:</h4>
                   <ol className="list-decimal list-inside space-y-2">
-                    {currentActivity.steps.map((step, index) => (
-                      <li key={index}>{step}</li>
-                    ))}
+                  {currentActivity.steps.map((step, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: step }} />))}
                   </ol>
                 </div>
-                <p className="text-gray-600 mb-6">{currentActivity.announcement}</p>
+                <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: currentActivity.announcement }} />
                 <a
                   href={currentActivity.link}
                   target="_blank"

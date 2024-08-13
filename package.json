@@ -1,5 +1,5 @@
 {
-  "name": "a-frame-in-100-lines",
+  "name": "boost-guild",
   "version": "0.2.2",
   "scripts": {
     "build": "next build",

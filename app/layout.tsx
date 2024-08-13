@@ -4,12 +4,15 @@ import { NEXT_PUBLIC_URL } from '@/app/config';
 import { Provider } from "jotai";
 
 export const metadata: Metadata = {
-  title: 'Boot Guild!',
-  description: 'LFG',
+  title: 'Boost Guild',
+  description: 'The Community Powering Boost Protocol',
+  // icons: {
+  //   icon: '/images/boostguild.png', 
+  // },
   openGraph: {
     title: 'Boost Guild',
     description: 'Boost Guild Website',
-    images: [`${NEXT_PUBLIC_URL}/images/how-boostguild-work.webp`],
+    images: [`${NEXT_PUBLIC_URL}/images/boostguild.png`],
   },
   other: {
     // ...frameMetadata,
